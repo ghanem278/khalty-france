@@ -95,7 +95,7 @@
       },
       /* الأصوات المسجلة (بتاعتك انت) — مفيش توليد صوت بشري في اللعبة */
       voices: {
-        passwordSong: "audio/voices/password-1-habibi.mp3",   // حبيبي ما جالي نوم حبيبي ما جالي نوم
+        passwordSong: "audio/voices/password-1-habibi.mp3",   // حبيبي ما جالي نوم حبيبي ما جالي نوم حبيبي
         passwordOmar: "audio/voices/password-2-ana-omar.mp3", // انا عمر
         passwordReply: "audio/voices/password-3-reply.mp3",   // ايه يا وحش احنا هنقضبها مغنى طول اليوم
         khaltyTimeout: "audio/voices/khalty-antoq.mp3",       // انطق والا سأشرحنك
@@ -104,9 +104,9 @@
 
     /* شاشة نجاح الباسورد: النص بيظهر كترجمة مع كل صوت (حتى لو الملف لسه مش موجود) */
     passwordSequence: [
-      { voice: "passwordSong",  caption: "حبيبي ما جالي نوم.. حبيبي ما جالي نوم 🎶", holdMs: 2600 },
-      { voice: "passwordOmar",  caption: "أنا عُمر!", holdMs: 1300 },
-      { voice: "passwordReply", caption: "إيه يا وحش! احنا هنقضّبها مغنى طول اليوم 😂", holdMs: 2800 },
+      { voice: "passwordSong",  caption: "حبيبي ما جالي نوم.. حبيبي ما جالي نوم حبيبي🎶", holdMs: 4000 },
+      { voice: "passwordOmar",  caption: "أنا عُمري ما كنت بغيييييييير عيونك عايشه جوااااااااااااااايا خلاص  يوم ورا يوم", holdMs: 13000 },
+      { voice: "passwordReply", caption: "خلااص يا وحش بقا! احنا هنقضّبها مغنى طول الليل اخرس بقا😂", holdMs: 5000 },
     ],
 
     timeoutLine: "انطق والا سأشرحنك!",
