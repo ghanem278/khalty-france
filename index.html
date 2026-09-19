@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>خالتي فرنسا — لعبة تحديات القعدات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#180f66">
+  <meta name="description" content="خالتي فرنسا: لعبة تحديات للقعدات والصحاب. عجلة + حجر ورقة مقص + تحديات مجنونة.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="خالتي فرنسا">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/screens.css">
+</head>
+<body>
+  <div id="app">
+    <div id="screens"></div>
+    <div id="chrome" class="chrome-hidden"></div>
+    <div id="overlay-root"></div>
+    <div id="toast-root" aria-live="polite"></div>
+    <div id="boot" class="boot"><span>خالتي فرنسا…</span></div>
+  </div>
+  <noscript><p style="color:#fff;padding:24px;text-align:center">اللعبة محتاجة JavaScript عشان تشتغل.</p></noscript>
+
+  <!-- ترتيب التحميل مهم. (Scripts عادية عشان تشتغل حتى لو فتحت الملف بدبل كليك) -->
+  <script src="js/config.js"></script>
+  <script src="data/challenges.js"></script>
+  <script src="data/avatars.js"></script>
+  <script src="data/escapes.js"></script>
+  <script src="data/terms.js"></script>
+
+  <script src="js/logic/utils.js"></script>
+  <script src="js/logic/players.js"></script>
+  <script src="js/logic/roulette.js"></script>
+  <script src="js/logic/rps.js"></script>
+  <script src="js/logic/challenges.js"></script>
+  <script src="js/logic/scoring.js"></script>
+  <script src="js/logic/prize.js"></script>
+  <script src="js/logic/game.js"></script>
+
+  <script src="js/systems/storage.js"></script>
+  <script src="js/systems/haptics.js"></script>
+  <script src="js/systems/speech.js"></script>
+  <script src="js/systems/audio.js"></script>
+  <script src="js/systems/vfx.js"></script>
+
+  <script src="js/ui/components.js"></script>
+  <script src="js/ui/app.js"></script>
+  <script src="js/ui/screens/splash.js"></script>
+  <script src="js/ui/screens/terms.js"></script>
+  <script src="js/ui/screens/password.js"></script>
+  <script src="js/ui/screens/setup.js"></script>
+  <script src="js/ui/screens/main.js"></script>
+  <script src="js/ui/screens/rps.js"></script>
+  <script src="js/ui/screens/challenge.js"></script>
+  <script src="js/ui/screens/results.js"></script>
+  <script src="js/boot.js"></script>
+</body>
+</html>

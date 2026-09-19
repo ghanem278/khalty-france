@@ -1,0 +1,60 @@
+/* ==========================================================================
+   THEME  —  غيّر الألوان والخطوط من هنا بس، وكل اللعبة هتتغير.
+   ========================================================================== */
+
+@font-face { font-family: "Lalezar"; src: url("../fonts/lalezar-arabic-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Lalezar"; src: url("../fonts/lalezar-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122; }
+@font-face { font-family: "Baloo"; src: url("../fonts/baloo-bhaijaan-2-arabic-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Baloo"; src: url("../fonts/baloo-bhaijaan-2-arabic-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Baloo"; src: url("../fonts/baloo-bhaijaan-2-arabic-800-normal.woff2") format("woff2"); font-weight: 800; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Baloo"; src: url("../fonts/baloo-bhaijaan-2-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122; }
+@font-face { font-family: "Baloo"; src: url("../fonts/baloo-bhaijaan-2-latin-700-normal.woff2") format("woff2"); font-weight: 700 800; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122; }
+
+:root {
+  /* ---- Color system ---- */
+  --ink:        #1a0f3a;   /* outlines + dark text */
+  --bg:         #2b1fa8;   /* game background (royal night) */
+  --bg-deep:    #180f66;
+  --bg-dots:    #3a2dc4;   /* halftone dots */
+  --paper:      #fff1cf;   /* cards */
+  --paper-2:    #ffe3a3;   /* card alt / pressed */
+  --text:       #1a0f3a;
+  --text-light: #fff8e6;
+  --muted:      #6a5a9a;
+
+  --primary:    #ff3d8b;   /* hot pink — main CTA */
+  --secondary:  #14c9b4;   /* teal */
+  --accent:     #ffd23f;   /* sun yellow */
+  --success:    #4fd15f;
+  --warning:    #ff9f1c;
+  --danger:     #ff4b3e;
+  --gold-1:     #ffe27a;
+  --gold-2:     #f5a300;
+
+  /* ---- Wheel slice colors (10 = max players) ---- */
+  --wheel-1: #ff3d8b; --wheel-2: #ffd23f; --wheel-3: #14c9b4; --wheel-4: #7c4dff; --wheel-5: #ff7a1a;
+  --wheel-6: #4fd15f; --wheel-7: #2f8cff; --wheel-8: #ff5c5c; --wheel-9: #b6e21f; --wheel-10: #ff8fd0;
+
+  /* ---- Shape ---- */
+  --border: 3px;
+  --r-sm: 12px; --r-md: 18px; --r-lg: 26px; --r-xl: 34px;
+  --shadow-hard: 0 6px 0 var(--ink);
+  --shadow-hard-sm: 0 4px 0 var(--ink);
+  --shadow-soft: 0 14px 30px rgba(10, 4, 50, .45);
+
+  /* ---- Type ---- */
+  --font-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+  --font-display: "Lalezar", "Baloo", "Segoe UI", system-ui, var(--font-emoji), sans-serif;
+  --font-body: "Baloo", "Segoe UI", system-ui, -apple-system, var(--font-emoji), sans-serif;
+
+  /* ---- Motion ---- */
+  --ease-pop: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --t-fast: 120ms; --t-med: 260ms; --t-slow: 480ms;
+
+  /* ---- Safe areas ---- */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}

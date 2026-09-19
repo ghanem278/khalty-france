@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="خالتي فرنسا">
+  <!-- placeholder: استبدل الملف ده بصورة خالتي فرنسا (نفس الاسم assets/logo.svg أو .png وغيّر المسار في splash.js) -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#ff9f1c"/></radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c4dff"/><stop offset="1" stop-color="#4a2bb8"/></linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="188" fill="url(#bg)" stroke="#1a0f3a" stroke-width="12"/>
+  <!-- curlers/hair -->
+  <g stroke="#1a0f3a" stroke-width="9" stroke-linejoin="round">
+    <circle cx="96" cy="128" r="46" fill="url(#hair)"/><circle cx="304" cy="128" r="46" fill="url(#hair)"/>
+    <circle cx="150" cy="86" r="50" fill="url(#hair)"/><circle cx="250" cy="86" r="50" fill="url(#hair)"/><circle cx="200" cy="72" r="46" fill="url(#hair)"/>
+  </g>
+  <g fill="#ff3d8b" stroke="#1a0f3a" stroke-width="6"><rect x="70" y="118" width="40" height="18" rx="9" transform="rotate(-20 90 127)"/><rect x="290" y="118" width="40" height="18" rx="9" transform="rotate(20 310 127)"/><rect x="180" y="52" width="40" height="18" rx="9"/></g>
+  <!-- face -->
+  <ellipse cx="200" cy="216" rx="112" ry="118" fill="#ffd9b0" stroke="#1a0f3a" stroke-width="9"/>
+  <!-- cheeks -->
+  <circle cx="130" cy="252" r="22" fill="#ff8fb3" opacity=".85"/><circle cx="270" cy="252" r="22" fill="#ff8fb3" opacity=".85"/>
+  <!-- glasses -->
+  <g fill="#fff" stroke="#1a0f3a" stroke-width="8"><circle cx="155" cy="200" r="34"/><circle cx="245" cy="200" r="34"/></g>
+  <path d="M189 198h22" stroke="#1a0f3a" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#1a0f3a"><circle cx="160" cy="204" r="12"/><circle cx="240" cy="204" r="12"/></g>
+  <circle cx="164" cy="199" r="4" fill="#fff"/><circle cx="244" cy="199" r="4" fill="#fff"/>
+  <!-- brows -->
+  <path d="M120 156q35-26 68-6M212 150q33-20 68 6" fill="none" stroke="#1a0f3a" stroke-width="10" stroke-linecap="round"/>
+  <!-- big lips -->
+  <path d="M138 290q62-36 124 0q-14 52-62 52t-62-52z" fill="#ff2e63" stroke="#1a0f3a" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M148 294q52 22 104 0" fill="none" stroke="#1a0f3a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M170 312q30 14 60 0" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <!-- earrings -->
+  <g fill="#ffd23f" stroke="#1a0f3a" stroke-width="6"><circle cx="86" cy="262" r="15"/><circle cx="314" cy="262" r="15"/></g>
+</svg>

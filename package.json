@@ -1,0 +1,11 @@
+{
+  "name": "khalty-france",
+  "version": "1.0.0",
+  "description": "خالتي فرنسا — لعبة تحديات القعدات (Offline PWA)",
+  "private": true,
+  "scripts": {
+    "test": "node tests/logic.test.js",
+    "test:e2e": "node tests/e2e.js",
+    "start": "npx --yes serve -l 8080 ."
+  }
+}
