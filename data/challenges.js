@@ -32,7 +32,7 @@
 
   KF.DATA.challenges = [
     { id: "c001", text: "غني اغنيه اجنبي", category: "singing" },
-    { id: "c002", text: "اقفل علي رجل واحده لمده دقيقه", category: "physical", duration: 60, flags: ["physical"] },
+    { id: "c002", text: "اقف علي رجل واحده لمده دقيقه", category: "physical", duration: 60, flags: ["physical"] },
     { id: "c003", text: "اختار حد من اللي قاعدين يرسملك حاجة علي وشك وتكمل بيها لاخر الجيم", category: "special" },
     { id: "c004", text: "نزل بوست فيس انك هتمسح الاكونت لأسباب دراسيه", category: "phone", flags: ["external"] },
     { id: "c005", text: "اتصل علي رقم عشوائي واعمل عليه حوار", category: "phone", flags: ["external"] },

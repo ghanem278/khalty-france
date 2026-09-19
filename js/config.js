@@ -23,7 +23,7 @@
       /* أي كلمة من دول تفتح اللعبة (بعد تنظيف الحروف والتشكيل) */
       answers: ["يوم ورا يوم", "يوم وراء يوم"],
       hintAfterFails: 3,
-      hint: "تلميح: أفيه مشهور من فيلم قديم لهنيدي 🎬",
+      hint: "تلميح: إفيه مشهور من فيلم قديم لهنيدي 🎬",
     },
 
     /* نقاط تنفيذ التحدي العادي (كل تحدي ممكن يكون له points خاصة في data/challenges.js) */
@@ -95,6 +95,7 @@
       },
       /* الأصوات المسجلة (بتاعتك انت) — مفيش توليد صوت بشري في اللعبة */
       voices: {
+        passwordEnter: "password-enter.mp3",
         passwordSong: "audio/voices/password-1-habibi.mp3",   // حبيبي ما جالي نوم حبيبي ما جالي نوم حبيبي
         passwordOmar: "audio/voices/password-2-ana-omar.mp3", // انا عمر
         passwordReply: "audio/voices/password-3-reply.mp3",   // ايه يا وحش احنا هنقضبها مغنى طول اليوم
@@ -105,8 +106,8 @@
     /* شاشة نجاح الباسورد: النص بيظهر كترجمة مع كل صوت (حتى لو الملف لسه مش موجود) */
     passwordSequence: [
       { voice: "passwordSong",  caption: "حبيبي ما جالي نوم.. حبيبي ما جالي نوم حبيبي🎶", holdMs: 4000 },
-      { voice: "passwordOmar",  caption: "أنا عُمري ما كنت بغيييييييير عيونك عايشه جوااااااااااااااايا خلاص  يوم ورا يوم", holdMs: 13000 },
-      { voice: "passwordReply", caption: "خلااص يا وحش بقا! احنا هنقضّبها مغنى طول الليل اخرس بقا😂", holdMs: 5000 },
+      { voice: "passwordOmar",  caption: "أنا عُمري ما كنت بغيييييييير عيونك عايشه جوااااااااااااااايا خلاص بس والنبي شويه شويه يوم ورا يوم", holdMs: 13000 },
+      { voice: "passwordReply", caption: "خلااص يا وحش بقا! احنا هنقضّيها مغنى طول الليل ولا ايه اخرس بقا😂", holdMs: 5000 },
     ],
 
     timeoutLine: "انطق والا سأشرحنك!",

@@ -28,7 +28,7 @@
     { id: "a17", emoji: "🥷", bg: "#6a5a9a", label: "النينجا" },
     { id: "a18", emoji: "🧞", bg: "#14c9b4", label: "العفريت" },
     { id: "a19", emoji: "👻", bg: "#dcd6ff", label: "الشبح" },
-    { id: "a20", emoji: "💩", bg: "#a8743a", label: "الكاكا" },
+    { id: "a20", emoji: "💩", bg: "#a8743a", label: "اليعععع" },
     { id: "a21", emoji: "🔥", bg: "#ff5c5c", label: "النار" },
     { id: "a22", emoji: "🍕", bg: "#ffd23f", label: "البيتزا" },
     { id: "a23", emoji: "🥔", bg: "#d9a441", label: "البطاطس" },

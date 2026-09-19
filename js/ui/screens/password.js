@@ -8,8 +8,30 @@
       el.classList.add("pw-screen");
       let fails = 0, listening = false, unlocking = false, alive = true;
 
+      // تشغيل ملف الصوت مباشرة عن طريق عنصر Audio لتفادي مشاكل الـ Config والـ AudioContext
+      const enterAudio = new Audio("audio/voices/password-enter.mp3");
+      
+      const playEnterVoice = () => {
+        if (!alive) return;
+        enterAudio.play().catch(() => {
+          // في حالة حظر المتصفح للـ Autoplay يتم تشغيله فور أول لمسة للمستخدم
+          const onUserInteraction = () => {
+            if (alive && !unlocking) {
+              enterAudio.play().catch(() => {});
+            }
+            root.removeEventListener("click", onUserInteraction);
+            root.removeEventListener("touchstart", onUserInteraction);
+          };
+          root.addEventListener("click", onUserInteraction, { once: true });
+          root.addEventListener("touchstart", onUserInteraction, { once: true });
+        });
+      };
+
+      // تشغيل الصوت فور فتح الشاشة
+      playEnterVoice();
+
       const lock = h("div", { class: "lock-icon" }, "🔒");
-      const title = h("div", { class: "display h1", style: { color: "var(--accent)", WebkitTextStroke: "6px var(--ink)", paintOrder: "stroke fill", textShadow: "0 5px 0 var(--ink)" } }, "كلمة السر");
+      const title = h("div", { class: "display h1", style: { color: "var(--accent)", WebkitTextStroke: "6px var(--ink)", paintOrder: "stroke fill", textShadow: "0 5px 0 var(--ink)" } }, "أنطق كلمة السر");
       const sub = h("p", { class: "muted", style: { fontWeight: 700 } }, "اكتبها أو قولها بصوتك عشان تفتح اللعبة");
       const input = h("input", { class: "field", type: "text", placeholder: "اكتب كلمة السر هنا", dir: "rtl", autocomplete: "off", autocapitalize: "off", spellcheck: "false", enterkeyhint: "go", "aria-label": "كلمة السر" });
       const hint = h("div", { class: "pw-hint", "aria-live": "polite" });
@@ -54,6 +76,7 @@
       /* مشهد النجاح: ترجمة + صوت (لو الملف موجود) ثم فتح اللعبة */
       async function unlock() {
         unlocking = true; stopListen();
+        enterAudio.pause(); // إيقاف صوت الدخول عند فتح القفل
         input.blur();
         lock.textContent = "🔓"; lock.classList.add("open");
         KF.Audio.play("success"); KF.Haptics.buzz("success");
@@ -69,9 +92,9 @@
           cap.replaceChildren(capEl);
           KF.Haptics.buzz("select");
           const started = performance.now();
-          const played = await KF.Audio.playVoice(step.voice);       // بيرجع فورًا لو الملف مش موجود
+          const played = await KF.Audio.playVoice(step.voice);
           const spent = performance.now() - started;
-          if (!played || spent < 500) await wait(step.holdMs);        // من غير صوت: الترجمة تفضل مدة معقولة
+          if (!played || spent < 500) await wait(step.holdMs);
           else await wait(250);
         }
         KF.Audio.duck(false);
@@ -87,7 +110,15 @@
         button("رجوع", { cls: "ghost btn-sm", onClick: () => app.prev(), sfx: "click" }));
       root.setTimeout(() => { try { input.focus({ preventScroll: true }); } catch (e) {} }, 700);
 
-      return { destroy() { alive = false; stopListen(); KF.Audio.stopVoice(); KF.Audio.duck(false); } };
+      return { 
+        destroy() { 
+          alive = false; 
+          stopListen(); 
+          enterAudio.pause();
+          KF.Audio.stopVoice(); 
+          KF.Audio.duck(false); 
+        } 
+      };
     },
   });
 })(typeof window !== "undefined" ? window : globalThis);
