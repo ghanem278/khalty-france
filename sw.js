@@ -1,6 +1,6 @@
 /* Service Worker — بيخلي اللعبة تشتغل أوفلاين.
    لما تعدّل أي ملف: غيّر رقم VERSION تحت عشان المتصفح يحمّل النسخة الجديدة. */
-const VERSION = "kf-v1.0.0";
+const VERSION = "kf-v1.0.3";
 
 const CORE = [
   "./", "index.html", "manifest.webmanifest",
@@ -15,6 +15,14 @@ const CORE = [
   "js/ui/components.js", "js/ui/app.js",
   "js/ui/screens/splash.js", "js/ui/screens/terms.js", "js/ui/screens/password.js", "js/ui/screens/setup.js", "js/ui/screens/main.js", "js/ui/screens/rps.js", "js/ui/screens/challenge.js", "js/ui/screens/results.js",
   "js/boot.js",
+  
+  /* مسارات أصوات الفويس والموسيقى المباشرة للتأكيد على تخزينها أوفلاين */
+  "audio/voices/password-enter.mp3",
+  "audio/voices/password-1-habibi.mp3",
+  "audio/voices/password-2-ana-omar.mp3",
+  "audio/voices/password-3-reply.mp3",
+  "audio/voices/khalty-antoq.mp3",
+  "audio/music/background.mp3"
 ];
 
 /* الأصوات اختيارية: بنقرا المسارات من config.js عشان مفيش قايمة ثانية نصيّنها */
